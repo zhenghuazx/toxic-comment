@@ -15,7 +15,6 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
 lib64/
 parts/
 sdist/
@@ -106,3 +105,7 @@ idea
 .idea/
 .idea
 .idea/modules.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/kaggle-toxic-comment.iml
+.idea/misc.xml
+.DS_Store
