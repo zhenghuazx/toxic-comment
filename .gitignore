@@ -103,3 +103,6 @@ ENV/
 .DS_Store
 # idea
 idea
+.idea/
+.idea
+.idea/modules.xml
