@@ -8,4 +8,5 @@ This is my first kaggle game after graduation and made a lot of mistakes at the 
 
 ## Models and LB Scores
 
-#
+### other models
+- DCNN
