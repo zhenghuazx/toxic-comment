@@ -10,11 +10,6 @@ This is my first kaggle game after graduation and made a lot of mistakes at the 
 ------------------
 ## Models and LB Scores
 ### Models (included)
-Refer to [here](https://github.com/zhenghuazx/toxic-comment/blob/master/lib/models.py) for RCNN, RNN, capsule NN and CNN code.
-
-Refer to [here](https://github.com/zhenghuazx/toxic-comment/blob/master/lib/cnn.py) for Multi Channel Variable size CNN (MVCNN) and 2D CNN.
-
-Refer to [here](https://github.com/zhenghuazx/toxic-comment/blob/master/lib/rnn.py) for Conv layer + RNN.
 
 I trained 35 models with 5-fold cv for RNN/RCNN/Capsule and 10-fold cv for CNN. Because of limitation in submission I only evaluates some of them with LB, the final submission blends all 35 models and some kernels on Kaggle. They together push me to top 3%.
 
@@ -35,6 +30,12 @@ I trained 35 models with 5-fold cv for RNN/RCNN/Capsule and 10-fold cv for CNN. 
 | capsule     | fasttext-crawl-300d-2M | Deep prcessing and "post" padding/truncating  | 5 | 0.9859 |
 | capsule     | glove.840B.300d | Soft prcessing and "post" padding/truncating  | 5 | 0.9856 |
 | capsule     | fasttext-crawl-300d-2M | Deep prcessing and "pre" padding/truncating  | 5 | 0.9854 |
+
+Refer to [here](https://github.com/zhenghuazx/toxic-comment/blob/master/lib/models.py) for RCNN, RNN, capsule NN and CNN code.
+
+Refer to [here](https://github.com/zhenghuazx/toxic-comment/blob/master/lib/cnn.py) for Multi Channel Variable size CNN (MVCNN) and 2D CNN.
+
+Refer to [here](https://github.com/zhenghuazx/toxic-comment/blob/master/lib/rnn.py) for Conv layer + RNN.
 
 ### Other Models (excluded)
 - **DCNN:** 
