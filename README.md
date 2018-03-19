@@ -91,6 +91,7 @@ def mulrnn(embedding_matrix, num_classes,  max_seq_len, l2_weight_decay=0.0001, 
     return model
 ```
 - **Very Deep CNN:**
+Refer to [Conneau et al (2016)](https://arxiv.org/abs/1606.01781).
 This model works on both word and char level and use deeper architecture. It takes very fast on AWS p2.xlarge but only gives ~ 0.045 validation logloss on 20% hold-out. So I excluded the model.
 ```python
 def vdnn(embedding_matrix, num_classes, max_seq_len, num_filters=2, filter_sizes=[64, 128, 256, 512], l2_weight_decay=0.0001, dropout_val=0.5,
