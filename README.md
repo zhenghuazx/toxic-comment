@@ -12,7 +12,8 @@ This is my first kaggle game after graduation and made a lot of mistakes at the 
 
 ### other models
 #### DCNN 
-[Kalchbrenner et al (2014)](https://arxiv.org/abs/1404.2188)
+Refer to [Kalchbrenner et al (2014)](https://arxiv.org/abs/1404.2188).
+
 I am still working on testing the models. Please refer [bicepjai](https://github.com/bicepjai/Deep-Survey-Text-Classification/blob/master/deep_models/paper_03_med_cnn/utils.py) for code.
 
 #### CHAR-RNN
@@ -53,7 +54,8 @@ def charrnn(char_num, num_classes, max_seq_len, filter_sizes=[3, 4, 5, 6, 7], rn
 ```
 
 #### Multiplicative LSTM for sequence modelling 
-[Krause et al (2016)](https://arxiv.org/pdf/1609.07959.pdf)
+Refer to [Krause et al (2016)](https://arxiv.org/pdf/1609.07959.pdf)
+Tried but give it up.
 ```python
 def mulrnn(embedding_matrix, num_classes,  max_seq_len, l2_weight_decay=0.0001, rnn_dim=100, dropout_val=0.3, dense_dim=32, add_sigmoid=True, train_embeds=False, gpus=0, rnn_type='lstm', mask_zero=True, auxiliary=True, kernel_regularizer=None, recurrent_regularizer=None, activity_regularizer=None, dropout=0.2, recurrent_dropout=0.2):
     input_ = Input(shape=(max_seq_len,))
