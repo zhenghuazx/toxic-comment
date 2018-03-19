@@ -9,8 +9,11 @@ This is my first kaggle game after graduation and made a lot of mistakes at the 
 
 ------------------
 ## Models and LB Scores
+### recurrent neural nets
+Refer to [here](https://github.com/zhenghuazx/toxic-comment/blob/master/lib/models.py) for code.
 
-### other models
+
+### other models (excluded)
 #### DCNN 
 Refer to [Kalchbrenner et al (2014)](https://arxiv.org/abs/1404.2188).
 
