@@ -14,11 +14,11 @@ Refer to [here](https://github.com/zhenghuazx/toxic-comment/blob/master/lib/mode
 
 | Model Description | Embedding   |  Preprocessing                       |   k-folds  | LB scores     |
 | ------------- |:---------------:| :-----------------------------------:|:-----------------:|--------------:|
-| rcnn          | glove.840B.300d | Deep prcessing and "pre" padding/truncating  | 5 | 0.9865 |
-| rcnn          | glove.840B.300d | Deep prcessing and "post" padding/truncating | 5 | 0.9865 |
-| rcnn          | glove.840B.300d | Soft prcessing and "pre" padding/truncating  | 5 | 0.9861 |
-| rcnn          | fasttext-english.300d| Soft prcessing and "post" padding/truncating  | 5 | 0.9861 |
-| rcnn          | fasttext-crawl-300d-2M| Deep prcessing and "pre" padding/truncating  | 5 | 0.9859 |
+| rcnn       | glove.840B.300d | Deep prcessing and "pre" padding/truncating  | 5 | 0.9865 |
+| rcnn       | glove.840B.300d | Deep prcessing and "post" padding/truncating | 5 | 0.9865 |
+| rcnn       | glove.840B.300d | Soft prcessing and "pre" padding/truncating  | 5 | 0.9861 |
+| rcnn       | fasttext-english.300d| Soft prcessing and "post" padding/truncating  | 5 | 0.9861 |
+| rcnn       | fasttext-crawl-300d-2M| Deep prcessing and "pre" padding/truncating  | 5 | 0.9859 |
 
 ### Other Models (excluded)
 - **DCNN:** 
