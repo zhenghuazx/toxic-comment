@@ -12,9 +12,9 @@ This is my first kaggle game after graduation and made a lot of mistakes at the 
 ### Recurrent Neural Nets
 Refer to [here](https://github.com/zhenghuazx/toxic-comment/blob/master/lib/models.py) for code.
 
-| Model Description    | Embedding    |  Preprocessing         | LB scores  |
-| ------------- |:-------------:| :-----:|-----:|
-| col 3 is      | right-aligned | $1600 |    |
+| Model Description | Embedding   |  Preprocessing                       | LB scores     |
+| ------------- |:---------------:| :-----------------------------------:|--------------:|
+| rcnn          | glove.840B.300d | Deep prcessing and "pre" padding/truncating | 0.9865 |
 | col 2 is      | centered      |   $12 |    |
 | zebra stripes | are neat      |    $1 |    |
 
