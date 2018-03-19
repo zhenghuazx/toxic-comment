@@ -17,7 +17,7 @@ Refer to [here](https://github.com/zhenghuazx/toxic-comment/blob/master/lib/mode
 - **DCNN:** 
 Refer to [Kalchbrenner et al (2014)](https://arxiv.org/abs/1404.2188). I am still working on testing the models. Please refer [bicepjai](https://github.com/bicepjai/Deep-Survey-Text-Classification/blob/master/deep_models/paper_03_med_cnn/utils.py) for code.
 
-- **CHAR-RNN**
+- **CHAR-RNN:**
 This model works on character level and utilize cnn to capture ngrams with rnn on the top of them. It takes 2 hours on AWS p2.xlarge for each epoch while gives ~ 0.045 validation logloss on 20% hold-out after 5 epochs. So I stopped the cross validation and excluded the model.
 ```python
 def charrnn(char_num, num_classes, max_seq_len, filter_sizes=[3, 4, 5, 6, 7], rnn_dim = 128, num_filters=64, l2_weight_decay=0.0001, dropout_val=0.25, dense_dim=32, auxiliary = False, dropout=0.2, recurrent_dropout=0.2, add_sigmoid=True, train_embeds=False, gpus=0, add_embeds=True, rnn_type='gru'):
@@ -54,7 +54,7 @@ def charrnn(char_num, num_classes, max_seq_len, filter_sizes=[3, 4, 5, 6, 7], rn
     return model
 ```
 
-- **Multiplicative LSTM for sequence modelling**
+- **Multiplicative LSTM for sequence modelling:**
 Refer to [Krause et al (2016)](https://arxiv.org/pdf/1609.07959.pdf). Tried but gave it up.
 ```python
 def mulrnn(embedding_matrix, num_classes,  max_seq_len, l2_weight_decay=0.0001, rnn_dim=100, dropout_val=0.3, dense_dim=32, add_sigmoid=True, train_embeds=False, gpus=0, rnn_type='lstm', mask_zero=True, auxiliary=True, kernel_regularizer=None, recurrent_regularizer=None, activity_regularizer=None, dropout=0.2, recurrent_dropout=0.2):
@@ -71,7 +71,7 @@ def mulrnn(embedding_matrix, num_classes,  max_seq_len, l2_weight_decay=0.0001, 
         model = multi_gpu_model(model, gpus=gpus)
     return model
 ```
-- **Very Deep CNN**
+- **Very Deep CNN:**
 This model works on both word and char level and use deeper architecture. It takes very fast on AWS p2.xlarge but only gives ~ 0.045 validation logloss on 20% hold-out. So I excluded the model.
 ```python
 def vdnn(embedding_matrix, num_classes, max_seq_len, num_filters=2, filter_sizes=[64, 128, 256, 512], l2_weight_decay=0.0001, dropout_val=0.5,
