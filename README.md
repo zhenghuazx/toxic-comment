@@ -12,6 +12,8 @@ This is my first kaggle game after graduation and made a lot of mistakes at the 
 ### Recurrent Neural Nets
 Refer to [here](https://github.com/zhenghuazx/toxic-comment/blob/master/lib/models.py) for code.
 
+I trained 35 models with 5-fold cv for RNN/RCNN/Capsule and 10-fold cv for CNN. Because of limitation in submission I only evaluates some of them with LB, the final submission blends all 35 models and some kernels on Kaggle.
+
 | Model Description | Embedding   |  Preprocessing                       |   k-folds  | LB scores     |
 | ------------- |:---------------:| :-----------------------------------:|:-----------------:|--------------:|
 | rcnn       | glove.840B.300d | Deep prcessing and "pre" padding/truncating  | 5 | 0.9865 |
@@ -26,7 +28,9 @@ Refer to [here](https://github.com/zhenghuazx/toxic-comment/blob/master/lib/mode
 | mvcnn   | fasttext-crawl-300d-2M glove.840B.300d | Deep prcessing and "post" padding/truncating  | 5 | 0.9849 |
 | mvcnn   | fasttext-english.300d glove.840B.300d | Soft prcessing and "post" padding/truncating  | 5 | 0.9831 |
 | mvcnn | fasttext-crawl-300d-2M glove.840B.300d google-word2vec| Deep prcessing and "post" padding/truncating  | 5 | 0.9849 |
-| capsule       | fasttext-english.300d glove.840B.300d | Soft prcessing and "post" padding/truncating  | 5 | 0.9831 |
+| capsule     | fasttext-crawl-300d-2M | Deep prcessing and "post" padding/truncating  | 5 | 0.9859 |
+| capsule     | glove.840B.300d | Soft prcessing and "post" padding/truncating  | 5 | 0.9856 |
+| capsule     | fasttext-crawl-300d-2M | Deep prcessing and "pre" padding/truncating  | 5 | 0.9854 |
 
 ### Other Models (excluded)
 - **DCNN:** 
