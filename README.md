@@ -9,9 +9,14 @@ This is my first kaggle game after graduation and made a lot of mistakes at the 
 
 ------------------
 ## Models and LB Scores
-### recurrent neural nets
+### Recurrent Neural Nets
 Refer to [here](https://github.com/zhenghuazx/toxic-comment/blob/master/lib/models.py) for code.
 
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 ### Other Models (excluded)
 - **DCNN:** 
