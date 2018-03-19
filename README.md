@@ -15,7 +15,7 @@ This is my first kaggle game after graduation and made a lot of mistakes at the 
 I am still working on testing the models. Please refer [bicepjai](https://github.com/bicepjai/Deep-Survey-Text-Classification/blob/master/deep_models/paper_03_med_cnn/utils.py) for code.
 
 #### CHAR-RNN
-- This model works on character level and utilize cnn to capture ngrams and with rnn on the top of them. It takes 2 hours on AWS p2.xlarge for each epoch while gives ~ 0.045 validation logloss on 20% hold-out. So I stopped the cross validation and exclude the model.
+- This model works on character level and utilize cnn to capture ngrams with rnn on the top of them. It takes 2 hours on AWS p2.xlarge for each epoch while gives ~ 0.045 validation logloss on 20% hold-out after 5 epochs. So I stopped the cross validation and exclude the model.
 ```python
 def charrnn(char_num, num_classes, max_seq_len, filter_sizes=[3, 4, 5, 6, 7], rnn_dim = 128, num_filters=64, l2_weight_decay=0.0001, dropout_val=0.25, dense_dim=32, auxiliary = False, dropout=0.2, recurrent_dropout=0.2, add_sigmoid=True, train_embeds=False, gpus=0, add_embeds=True, rnn_type='gru'):
     if rnn_type == 'lstm':
@@ -50,3 +50,20 @@ def charrnn(char_num, num_classes, max_seq_len, filter_sizes=[3, 4, 5, 6, 7], rn
         model = multi_gpu_model(model, gpus=gpus)
     return model
 ```
+
+#### Multiplicative LSTM for sequence modelling [Krause et al (2016)](https://arxiv.org/pdf/1609.07959.pdf)
+
+def mulrnn(embedding_matrix, num_classes,  max_seq_len, l2_weight_decay=0.0001, rnn_dim=100, dropout_val=0.3, dense_dim=32, add_sigmoid=True, train_embeds=False, gpus=0, rnn_type='lstm', mask_zero=True, auxiliary=True, kernel_regularizer=None, recurrent_regularizer=None, activity_regularizer=None, dropout=0.2, recurrent_dropout=0.2):
+    input_ = Input(shape=(max_seq_len,))
+    embeds = Embedding(embedding_matrix.shape[0],
+                       embedding_matrix.shape[1],
+                       weights=[embedding_matrix],
+                       input_length=max_seq_len,
+                       trainable=train_embeds)(input_)
+    x = MultiplicativeLSTM(32)(embeds)
+    output = Dense(num_classes, activation="sigmoid")(x)
+    model = Model(inputs=input_, outputs=output)
+    if gpus > 0:
+        model = multi_gpu_model(model, gpus=gpus)
+    return model
+
