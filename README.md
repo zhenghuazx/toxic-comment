@@ -12,7 +12,7 @@ This is my first kaggle game after graduation and made a lot of mistakes at the 
 - DCNN [Kalchbrenner et al (2014)](https://arxiv.org/abs/1404.2188)
 
 - charrnn 
-'''
+```python
 def charrnn(char_num, num_classes, max_seq_len, filter_sizes=[3, 4, 5, 6, 7], rnn_dim = 128, num_filters=64, l2_weight_decay=0.0001, dropout_val=0.25, dense_dim=32, auxiliary = False, dropout=0.2, recurrent_dropout=0.2, add_sigmoid=True, train_embeds=False, gpus=0, add_embeds=True, rnn_type='gru'):
     if rnn_type == 'lstm':
         RNN = CuDNNLSTM if gpus > 0 else LSTM
@@ -45,4 +45,4 @@ def charrnn(char_num, num_classes, max_seq_len, filter_sizes=[3, 4, 5, 6, 7], rn
     if gpus > 0:
         model = multi_gpu_model(model, gpus=gpus)
     return model
-'''
+```
