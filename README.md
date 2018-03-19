@@ -11,7 +11,8 @@ This is my first kaggle game after graduation and made a lot of mistakes at the 
 ## Models and LB Scores
 
 ### other models
-#### DCNN [Kalchbrenner et al (2014)](https://arxiv.org/abs/1404.2188)
+#### DCNN 
+[Kalchbrenner et al (2014)](https://arxiv.org/abs/1404.2188)
 I am still working on testing the models. Please refer [bicepjai](https://github.com/bicepjai/Deep-Survey-Text-Classification/blob/master/deep_models/paper_03_med_cnn/utils.py) for code.
 
 #### CHAR-RNN
@@ -51,8 +52,9 @@ def charrnn(char_num, num_classes, max_seq_len, filter_sizes=[3, 4, 5, 6, 7], rn
     return model
 ```
 
-#### Multiplicative LSTM for sequence modelling [Krause et al (2016)](https://arxiv.org/pdf/1609.07959.pdf)
-
+#### Multiplicative LSTM for sequence modelling 
+[Krause et al (2016)](https://arxiv.org/pdf/1609.07959.pdf)
+```python
 def mulrnn(embedding_matrix, num_classes,  max_seq_len, l2_weight_decay=0.0001, rnn_dim=100, dropout_val=0.3, dense_dim=32, add_sigmoid=True, train_embeds=False, gpus=0, rnn_type='lstm', mask_zero=True, auxiliary=True, kernel_regularizer=None, recurrent_regularizer=None, activity_regularizer=None, dropout=0.2, recurrent_dropout=0.2):
     input_ = Input(shape=(max_seq_len,))
     embeds = Embedding(embedding_matrix.shape[0],
@@ -66,4 +68,4 @@ def mulrnn(embedding_matrix, num_classes,  max_seq_len, l2_weight_decay=0.0001, 
     if gpus > 0:
         model = multi_gpu_model(model, gpus=gpus)
     return model
-
+```
