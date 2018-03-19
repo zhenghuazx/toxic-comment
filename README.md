@@ -127,3 +127,7 @@ def vdnn(embedding_matrix, num_classes, max_seq_len, num_filters=2, filter_sizes
         model = multi_gpu_model(model, gpus=gpus)
     return model
 ```
+## Acknowledgement
+- https://github.com/Donskov7/toxic_comments. Use embedding loader and some text preprocessing code.
+- https://bicepjai.github.io/machine-learning/2017/11/10/text-class-part1.html#racnn-neural-networks-for-text-classification. Learn a lot of CNN for text classification.
+- https://github.com/bojone/Capsule. Use the capsule implementation.
