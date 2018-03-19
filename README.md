@@ -55,7 +55,8 @@ def charrnn(char_num, num_classes, max_seq_len, filter_sizes=[3, 4, 5, 6, 7], rn
 
 #### Multiplicative LSTM for sequence modelling 
 Refer to [Krause et al (2016)](https://arxiv.org/pdf/1609.07959.pdf)
-Tried but give it up.
+
+Tried but gave it up.
 ```python
 def mulrnn(embedding_matrix, num_classes,  max_seq_len, l2_weight_decay=0.0001, rnn_dim=100, dropout_val=0.3, dense_dim=32, add_sigmoid=True, train_embeds=False, gpus=0, rnn_type='lstm', mask_zero=True, auxiliary=True, kernel_regularizer=None, recurrent_regularizer=None, activity_regularizer=None, dropout=0.2, recurrent_dropout=0.2):
     input_ = Input(shape=(max_seq_len,))
