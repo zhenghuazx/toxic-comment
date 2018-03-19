@@ -10,7 +10,11 @@ This is my first kaggle game after graduation and made a lot of mistakes at the 
 ------------------
 ## Models and LB Scores
 ### Models (included)
-Refer to [here](https://github.com/zhenghuazx/toxic-comment/blob/master/lib/models.py) for RCNN, RNN and CNN code.
+Refer to [here](https://github.com/zhenghuazx/toxic-comment/blob/master/lib/models.py) for RCNN, RNN, capsule NN and CNN code.
+
+Refer to [here](https://github.com/zhenghuazx/toxic-comment/blob/master/lib/cnn.py) for Multi Channel Variable size CNN (MVCNN) and 2D CNN.
+
+Refer to [here](https://github.com/zhenghuazx/toxic-comment/blob/master/lib/rnn.py) for Conv layer + RNN.
 
 I trained 35 models with 5-fold cv for RNN/RCNN/Capsule and 10-fold cv for CNN. Because of limitation in submission I only evaluates some of them with LB, the final submission blends all 35 models and some kernels on Kaggle. They together push me to top 3%.
 
@@ -131,3 +135,4 @@ def vdnn(embedding_matrix, num_classes, max_seq_len, num_filters=2, filter_sizes
 - https://github.com/Donskov7/toxic_comments. Use embedding loader and some text preprocessing code.
 - https://bicepjai.github.io/machine-learning/2017/11/10/text-class-part1.html#racnn-neural-networks-for-text-classification. Learn a lot of CNN for text classification.
 - https://github.com/bojone/Capsule. Use the capsule implementation.
+- https://www.kaggle.com/yekenot/textcnn-2d-convolution. Use 2D CNN architecture.
