@@ -15,6 +15,7 @@ Refer to [here](https://github.com/zhenghuazx/toxic-comment/blob/master/lib/mode
 
 ### Other Models (excluded)
 - **DCNN** 
+
 Refer to [Kalchbrenner et al (2014)](https://arxiv.org/abs/1404.2188). I am still working on testing the models. Please refer [bicepjai](https://github.com/bicepjai/Deep-Survey-Text-Classification/blob/master/deep_models/paper_03_med_cnn/utils.py) for code.
 
 - **CHAR-RNN**
