@@ -13,6 +13,7 @@ This is my first kaggle game after graduation and made a lot of mistakes at the 
 I am still working on testing the models. Please refer [bicepjai](https://github.com/bicepjai/Deep-Survey-Text-Classification/blob/master/deep_models/paper_03_med_cnn/utils.py) for code.
 
 - charrnn 
+
 This model works on character level and utilize cnn to capture ngrams and with rnn on the top of them. It takes 2 hours on AWS p2.xlarge for each epoch while gives ~ 0.045 validation logloss on 20% hold-out. So I stopped the cross validation and exclude the model.
 
 ```python
