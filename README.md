@@ -11,7 +11,7 @@ This is my first kaggle game after graduation and made a lot of mistakes at the 
 ## Models and LB Scores
 
 ### other models
-- DCNN [Kalchbrenner et al (2014)](https://arxiv.org/abs/1404.2188)
+#### DCNN [Kalchbrenner et al (2014)](https://arxiv.org/abs/1404.2188)
 I am still working on testing the models. Please refer [bicepjai](https://github.com/bicepjai/Deep-Survey-Text-Classification/blob/master/deep_models/paper_03_med_cnn/utils.py) for code.
 
 #### charrnn 
