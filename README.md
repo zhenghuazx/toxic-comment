@@ -18,8 +18,7 @@ This is my first kaggle game after graduation and made a lot of mistakes at the 
 - subword deduplication, i.e. fuckkkkkk!!!!! -> fuck!
 - word correction, i.e. “failepic” -> “fail epic”, “fking” -> “fuck”
 
-------------------
-## Auxiliary Input 
+### auxiliary input 
 - word_unique_pct: word count percent in each comment
 - punct_pct: punctuation percent in each comment
 - mean_word_len: average length of the words
