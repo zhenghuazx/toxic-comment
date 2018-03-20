@@ -326,6 +326,15 @@ def main(model,
                                 num_classes,
                                 max_seq_len,
                                 rnn_type=rnn_type)
+    if model_label == 'dpcnn':
+        model = dpcnn(embedding_matrix,
+                      num_classes,
+                      max_seq_len,
+                      num_filters=params.get('dpcnn').get('num_filters'),
+                      dense_dim=params.get('dpcnn').get('dense_dim'),
+                      add_sigmoid=True,
+                      gpus=gpus)
+
     if model_label == 'rcnn':
         model = rcnn(embedding_matrix,
                           num_classes,
@@ -390,7 +399,7 @@ def main(model,
             inputs = x_train
             inputs_val = x_test
             output = test_df_seq
-        hist = train(x_train=inputs,  # [x_train, x_aux_train]
+        hist = train(x_train=inputs,  # [x_train, x_aux_train] when auxiliary input is allowed.
                      y_train=y_train,
                      x_val=inputs_val,  # [x_test, x_aux_test],
                      y_val=y_test,
