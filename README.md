@@ -5,7 +5,7 @@ This project is launched for Kaggle Competition: [Toxic Comment Classification C
 
 ------------------
 ## About the project.
-This is my first kaggle game after graduation and made a lot of mistakes at the begining. After two-month soloing the game, I found it more important to learn than struggle in LB. 
+This is my first serious kaggle game and thus made a lot of mistakes at the begining. After two-month soloing the game, I found it more important to learn than struggle in LB. 
 
 ------------------
 ## Preprocessing
