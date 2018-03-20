@@ -8,6 +8,17 @@ This project is launched for Kaggle Competition: [Toxic Comment Classification C
 This is my first kaggle game after graduation and made a lot of mistakes at the begining. After two-month soloing the game, I found it more important to learn than struggle in LB. 
 
 ------------------
+## Preprocessing
+### deep cleaning
+- remove all non-alphabet characters
+
+### soft cleaning
+- replace ip address with “_ip_” and userId  with ”_userId_”
+- dictionary lookup of word replacements for words with an apostrophe i.e. “Can’t” -> “can not”, “I’m”-> “I am”, etc.
+- subword deduplication, i.e. fuckkkkkk!!!!! -> fuck!
+- word correction, i.e. “failepic” -> “fail epic”, “fking” -> “fuck”
+
+------------------
 ## Models and LB Scores
 ### Models (included)
 
@@ -31,10 +42,12 @@ I trained 35 models with 5-fold cv for RNN/RCNN/Capsule and 10-fold cv for CNN. 
 | capsule     | glove.840B.300d | Soft prcessing and "post" padding/truncating  | 5 | 0.9856 |
 | capsule     | fasttext-crawl-300d-2M | Deep prcessing and "pre" padding/truncating  | 5 | 0.9854 |
 | 2d cnn     | glove.840B.300d | Deep prcessing and "post" padding/truncating  | 10 | 0.9851 |
+| dpcnn     | glove.840B.300d | Deep prcessing and "post" padding/truncating  | 10 | 0.9861|
+| dpcnn     | fasttext-crawl-300d-2M | Deep prcessing and "pre" padding/truncating  | 10 | 0.9850|
 
 Refer to [here](https://github.com/zhenghuazx/toxic-comment/blob/master/lib/models.py) for RCNN, RNN, capsule NN and CNN code.
 
-Refer to [here](https://github.com/zhenghuazx/toxic-comment/blob/master/lib/cnn.py) for Multi Channel Variable size CNN (MVCNN) and 2D CNN.
+Refer to [here](https://github.com/zhenghuazx/toxic-comment/blob/master/lib/cnn.py) for Multi Channel Variable size CNN (MVCNN), 2D CNN and Deep Pyramid Convolutional Neural Networks(dpcnn).
 
 Refer to [here](https://github.com/zhenghuazx/toxic-comment/blob/master/lib/rnn.py) for Conv layer + RNN.
 
