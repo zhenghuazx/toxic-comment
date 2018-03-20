@@ -19,6 +19,14 @@ This is my first kaggle game after graduation and made a lot of mistakes at the 
 - word correction, i.e. “failepic” -> “fail epic”, “fking” -> “fuck”
 
 ------------------
+## Auxiliary Input 
+- word_unique_pct: word count percent in each comment
+- punct_pct: punctuation percent in each comment
+- mean_word_len: average length of the words
+- words_upper_pct: upper case words percentage
+- words_title_pct: title case words count
+
+------------------
 ## Models and LB Scores
 ### Models (included)
 
