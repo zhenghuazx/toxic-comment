@@ -40,6 +40,7 @@ I trained 35 models with 5-fold cv for RNN/RCNN/Capsule and 10-fold cv for CNN. 
 | rcnn       | fasttext-crawl-300d-2M| Deep prcessing and "pre" padding/truncating  | 5 | 0.9859 |
 | gru       | fasttext-crawl-300d-2M| Soft prcessing and "pre" padding/truncating  | 5 | 0.985  |
 | gru       | fasttext-crawl-300d-2M| Deep prcessing and "post" padding/truncating  | 5 | 0.9848 |
+| gru(rm fc layers)       | glove.840B.300d| Soft prcessing and "post" padding/truncating  | 5 | 0.9861 |
 | lstm      | fasttext-crawl-300d-2M| Soft prcessing and "pre" padding/truncating  | 5 | 0.9845 |
 | cnn     | glove.840B.300d| Deep prcessing and "pre" padding/truncating  | 10 | 0.9842 |
 | mvcnn   | fasttext-crawl-300d-2M glove.840B.300d | Deep prcessing and "post" padding/truncating  | 10 | 0.9849 |
